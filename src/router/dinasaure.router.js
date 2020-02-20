@@ -1,0 +1,10 @@
+ const dinasaurecontroller = require('../controller/dinasaure.controller');
+const express = require('express');
+var router = express.Router();
+router.post('/',dinasaurecontroller.add);
+router.get('/',dinasaurecontroller.getAll);
+router.get('/:id',dinasaurecontroller.getOneById);
+router.put('/:id',dinasaurecontroller.update);
+router.post('/friends/add/:id/:friendId',dinasaurecontroller.addFriend);
+router.post('/friends/remove/:id/:friendId',dinasaurecontroller.deleteFriend);
+module.exports = router ;

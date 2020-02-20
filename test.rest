@@ -1,0 +1,47 @@
+@baseUrl = http://localhost:3000/api
+
+POST {{baseUrl}}/dinasaures/ 
+Content-Type: application/json
+
+{
+    "username" : "medaloui3", 
+    "password" : "mohamed", 
+    "race" : "race" , 
+    "famille" : "aaaa",
+    "norriture" : "aaaa"
+}
+###
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+    "username" : "medaloui", 
+    "password" : "mohame"
+}
+###
+GET {{baseUrl}}/dinasaures/ 
+Content-Type: application/json
+###
+GET {{baseUrl}}/dinasaures/5e4c52a707dd0870e968b439
+Content-Type: application/json
+
+###
+PUT  {{baseUrl}}/dinasaures/5e4c52a707dd0870e968b439
+Content-Type: application/json
+
+{
+    "race" : "race" , 
+    "famille" : "abbb",
+    "norriture" : "aaaa"
+}
+
+###
+POST {{baseUrl}}/dinasaures/friends/add/5e4c52a707dd0870e968b439/5e4c53123f2ddb715488455a
+Content-Type: application/json
+
+{}
+###
+POST {{baseUrl}}/dinasaures/friends/remove/5e4c52a707dd0870e968b439/5e4c53123f2ddb715488455a
+Content-Type: application/json
+
+{}
